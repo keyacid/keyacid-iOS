@@ -17,6 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="view.backgroundColor">
+                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="5Pu-FB-vIQ" kind="relationship" relationship="rootViewController" id="2cP-FD-1ym"/>
                     </connections>
@@ -28,8 +33,8 @@
         <!--Profiles-->
         <scene sceneID="5Dx-iR-JbC">
             <objects>
-                <tableViewController id="cpp-Yc-WRF" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="opd-tX-EEE">
+                <tableViewController id="cpp-Yc-WRF" customClass="ProfilesTableViewController" customModule="keyacid" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="opd-tX-EEE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -48,6 +53,9 @@
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <state key="normal" title="Add"/>
+                                                    <connections>
+                                                        <action selector="remoteProfilesAddClicked" destination="cpp-Yc-WRF" eventType="touchUpInside" id="n3q-N1-oTt"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -68,6 +76,9 @@
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <state key="normal" title="Add"/>
+                                                    <connections>
+                                                        <action selector="localProfilesAddClicked" destination="cpp-Yc-WRF" eventType="touchUpInside" id="QWc-CJ-m3J"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -82,7 +93,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Profiles" id="noE-SY-oTv"/>
                     <connections>
-                        <segue destination="VQw-OZ-GsJ" kind="show" identifier="ShowRemoteProfile" action="showDetailViewController:sender:" id="cWh-y4-Mwn"/>
+                        <segue destination="VQw-OZ-GsJ" kind="show" identifier="ShowRemoteProfile" id="cWh-y4-Mwn"/>
                         <segue destination="xQs-ft-70d" kind="show" identifier="ShowLocalProfile" id="snP-NB-VJ2"/>
                     </connections>
                 </tableViewController>
@@ -93,8 +104,8 @@
         <!--Remote Profile-->
         <scene sceneID="aFd-lj-rgx">
             <objects>
-                <tableViewController id="VQw-OZ-GsJ" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Lnu-4W-oDw">
+                <tableViewController id="VQw-OZ-GsJ" customClass="RemoteProfileTableViewController" customModule="keyacid" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Lnu-4W-oDw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -115,7 +126,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zEa-Q6-NQ0">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zEa-Q6-NQ0">
                                                     <rect key="frame" x="68" y="0.0" width="299" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <nil key="textColor"/>
@@ -132,7 +143,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9bV-BE-Ftv">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9bV-BE-Ftv">
                                                     <rect key="frame" x="104" y="0.0" width="263" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <nil key="textColor"/>
@@ -162,7 +173,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <state key="normal" title="Scan Public Key QR Code"/>
                                                     <connections>
-                                                        <segue destination="mbK-Iv-J8q" kind="show" id="ZFZ-MF-l23"/>
+                                                        <segue destination="mbK-Iv-J8q" kind="show" id="Z5k-wZ-Sq8"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -177,8 +188,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Remote Profile" id="Vm7-Tk-DPb">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="t1q-ir-Z7d"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="V1v-g6-qf4"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="t1q-ir-Z7d">
+                            <connections>
+                                <action selector="cancelClicked" destination="VQw-OZ-GsJ" id="3zu-4K-YX2"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="V1v-g6-qf4"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q9t-ds-U3z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -207,8 +222,8 @@
         <!--Local Profile-->
         <scene sceneID="Nwx-QC-5QU">
             <objects>
-                <tableViewController id="xQs-ft-70d" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="xMW-1y-iJs">
+                <tableViewController id="xQs-ft-70d" customClass="LocalProfileTableViewController" customModule="keyacid" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="xMW-1y-iJs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -229,7 +244,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xT0-rU-Rho">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xT0-rU-Rho">
                                                     <rect key="frame" x="64" y="0.0" width="303" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <nil key="textColor"/>
@@ -253,7 +268,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="25R-5k-FHm">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="25R-5k-FHm">
                                                     <rect key="frame" x="107" y="0.0" width="260" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <nil key="textColor"/>
@@ -277,7 +292,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Yf-Cp-Rg7">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8Yf-Cp-Rg7">
                                                     <rect key="frame" x="100" y="0.0" width="267" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <nil key="textColor"/>
@@ -299,6 +314,9 @@
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <state key="normal" title="Generate Key Pair"/>
+                                                    <connections>
+                                                        <action selector="generateKeyPairClicked" destination="xQs-ft-70d" eventType="touchUpInside" id="pDx-ET-Pb7"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -310,13 +328,32 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZf-tS-1kc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <state key="normal" title="Generate Public Key"/>
+                                                    <connections>
+                                                        <action selector="generatePublicKeyClicked" destination="xQs-ft-70d" eventType="touchUpInside" id="ZXc-fB-gby"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yqt-TA-Ry7">
+                                        <rect key="frame" x="0.0" y="275.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yqt-TA-Ry7" id="xa3-aN-fz7">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Whc-bx-MaT">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <state key="normal" title="Show Public Key QR Code"/>
                                                     <connections>
-                                                        <segue destination="ynz-Qj-pR8" kind="show" id="9f5-8q-kzz"/>
+                                                        <action selector="showQRCodeClicked" destination="xQs-ft-70d" eventType="touchUpInside" id="UHt-Rf-L9h"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -331,9 +368,19 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Local Profile" id="BJP-rn-gx1">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Bra-hH-4uc"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="f4c-fH-GEH"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Bra-hH-4uc">
+                            <connections>
+                                <action selector="cancelClicked" destination="xQs-ft-70d" id="HHh-2X-wOO"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="f4c-fH-GEH"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="name" destination="xT0-rU-Rho" id="3K3-cW-5yk"/>
+                        <outlet property="privateKey" destination="25R-5k-FHm" id="amd-OT-lfh"/>
+                        <outlet property="publicKey" destination="8Yf-Cp-Rg7" id="iMb-Fg-yQS"/>
+                        <segue destination="ynz-Qj-pR8" kind="show" identifier="ShowShowQRCode" id="IwO-hg-ERy"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r4c-8m-giF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -399,9 +446,13 @@
         <!--keyacid-->
         <scene sceneID="H1q-8k-B5u">
             <objects>
-                <tabBarController id="5Pu-FB-vIQ" sceneMemberID="viewController">
+                <tabBarController id="5Pu-FB-vIQ" customClass="MainTabBarController" customModule="keyacid" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="keyacid" id="3f7-j4-PF4">
-                        <barButtonItem key="rightBarButtonItem" title="Profiles" id="PD5-dw-wXL"/>
+                        <barButtonItem key="rightBarButtonItem" title="Profiles" id="PD5-dw-wXL">
+                            <connections>
+                                <action selector="profilesClicked" destination="5Pu-FB-vIQ" id="XRc-OV-90Y"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="cd6-Lt-3DL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>

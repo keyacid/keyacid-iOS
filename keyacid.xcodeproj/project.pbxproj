@@ -14,8 +14,12 @@
 		750D17171EFABC4500DC857A /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750D17141EFABC4500DC857A /* Crypto.swift */; };
 		750D17181EFABC4500DC857A /* LocalProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750D17151EFABC4500DC857A /* LocalProfile.swift */; };
 		750D17191EFABC4500DC857A /* RemoteProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750D17161EFABC4500DC857A /* RemoteProfile.swift */; };
+		7598472B1EFB73F700AEBCFA /* ProfilesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7598472A1EFB73F700AEBCFA /* ProfilesTableViewController.swift */; };
+		7598472D1EFB755700AEBCFA /* RemoteProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7598472C1EFB755700AEBCFA /* RemoteProfileTableViewController.swift */; };
+		7598472F1EFB756A00AEBCFA /* LocalProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7598472E1EFB756A00AEBCFA /* LocalProfileTableViewController.swift */; };
 		75B709BA1EFB3E6E007BA123 /* origin.png in Resources */ = {isa = PBXBuildFile; fileRef = 75B709B91EFB3E6E007BA123 /* origin.png */; };
 		75CC0D111EFABCA90004045B /* Sodium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CC0D101EFABCA90004045B /* Sodium.framework */; };
+		75E7FFCB1EFB70300099792A /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E7FFCA1EFB70300099792A /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +32,13 @@
 		750D17141EFABC4500DC857A /* Crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
 		750D17151EFABC4500DC857A /* LocalProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalProfile.swift; sourceTree = "<group>"; };
 		750D17161EFABC4500DC857A /* RemoteProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteProfile.swift; sourceTree = "<group>"; };
+		7598472A1EFB73F700AEBCFA /* ProfilesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilesTableViewController.swift; sourceTree = "<group>"; };
+		7598472C1EFB755700AEBCFA /* RemoteProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteProfileTableViewController.swift; sourceTree = "<group>"; };
+		7598472E1EFB756A00AEBCFA /* LocalProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalProfileTableViewController.swift; sourceTree = "<group>"; };
 		75B709B61EFB3D7E007BA123 /* keyacid.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = keyacid.entitlements; sourceTree = "<group>"; };
 		75B709B91EFB3E6E007BA123 /* origin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = origin.png; sourceTree = "<group>"; };
 		75CC0D101EFABCA90004045B /* Sodium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sodium.framework; path = Carthage/Build/iOS/Sodium.framework; sourceTree = "<group>"; };
+		75E7FFCA1EFB70300099792A /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +78,10 @@
 				750D17151EFABC4500DC857A /* LocalProfile.swift */,
 				750D17141EFABC4500DC857A /* Crypto.swift */,
 				750D17061EFABC1200DC857A /* Main.storyboard */,
+				75E7FFCA1EFB70300099792A /* MainTabBarController.swift */,
+				7598472A1EFB73F700AEBCFA /* ProfilesTableViewController.swift */,
+				7598472C1EFB755700AEBCFA /* RemoteProfileTableViewController.swift */,
+				7598472E1EFB756A00AEBCFA /* LocalProfileTableViewController.swift */,
 				750D17091EFABC1200DC857A /* Assets.xcassets */,
 				750D170B1EFABC1200DC857A /* LaunchScreen.storyboard */,
 				750D170E1EFABC1200DC857A /* Info.plist */,
@@ -186,8 +198,12 @@
 			files = (
 				750D17191EFABC4500DC857A /* RemoteProfile.swift in Sources */,
 				750D17171EFABC4500DC857A /* Crypto.swift in Sources */,
+				7598472D1EFB755700AEBCFA /* RemoteProfileTableViewController.swift in Sources */,
+				7598472F1EFB756A00AEBCFA /* LocalProfileTableViewController.swift in Sources */,
+				75E7FFCB1EFB70300099792A /* MainTabBarController.swift in Sources */,
 				750D17181EFABC4500DC857A /* LocalProfile.swift in Sources */,
 				750D17031EFABC1200DC857A /* AppDelegate.swift in Sources */,
+				7598472B1EFB73F700AEBCFA /* ProfilesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
