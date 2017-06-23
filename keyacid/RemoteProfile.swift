@@ -31,4 +31,18 @@ class RemoteProfile {
         }
         return Data.init()
     }
+
+    func toDict() -> [String : String] {
+        return [
+            "name" : name,
+            "publicKey" : publicKey.base64EncodedString()
+        ]
+    }
+
+    class func fromDict(dict: [String : String]) -> RemoteProfile {
+        let ret: RemoteProfile = RemoteProfile.init()
+        ret.name = dict["name"]!
+        ret.publicKey = Data.init(base64Encoded: dict["publicKey"]!)!
+        return ret
+    }
 }

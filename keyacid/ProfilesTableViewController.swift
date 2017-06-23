@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Security
 
 class ProfilesTableViewController: UITableViewController {
 
@@ -141,6 +142,7 @@ class ProfilesTableViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         self.tableView.reloadData()
+        ProfilesTableViewController.securelySaveProfiles()
     }
 
     @IBAction func editClicked(_ sender: UIBarButtonItem) {
@@ -171,6 +173,49 @@ class ProfilesTableViewController: UITableViewController {
                 }
             }
             tableView.deleteRows(at: [indexPath], with: .automatic)
+            ProfilesTableViewController.securelySaveProfiles()
+        }
+    }
+
+    static func securelySaveProfiles() {
+        var remoteProfilesDict: [[String : String]] = []
+        for remoteProfile in ProfilesTableViewController.remoteProfiles {
+            remoteProfilesDict.append(remoteProfile.toDict())
+        }
+        var localProfilesDict: [[String : String]] = []
+        for localProfile in ProfilesTableViewController.localProfiles {
+            localProfilesDict.append(localProfile.toDict())
+        }
+        let dict: [String: [[String : String]]] = [
+            "remoteProfiles" : remoteProfilesDict,
+            "localProfiles" : localProfilesDict
+        ]
+        let query: [String : Any] = try! [
+            kSecClass as String : kSecClassGenericPassword as String,
+            kSecAttrAccount as String : "keyacid",
+            kSecValueData as String : JSONSerialization.data(withJSONObject: dict)
+        ] as [String : Any]
+        SecItemDelete(query as CFDictionary)
+        SecItemAdd(query as CFDictionary, nil)
+    }
+
+    static func securelyLoadProfiles() {
+        let query: [String : Any] = [
+            kSecClass as String : kSecClassGenericPassword,
+            kSecAttrAccount as String : "keyacid",
+            kSecReturnData as String : kCFBooleanTrue,
+            kSecMatchLimit as String : kSecMatchLimitOne
+        ] as [String : Any]
+        var dataTypeRef: AnyObject? = nil
+        let status: OSStatus = SecItemCopyMatching(query as CFDictionary, &dataTypeRef)
+        if status == noErr {
+            let dict: [String: [[String : String]]] = try! JSONSerialization.jsonObject(with: dataTypeRef as! Data) as! Dictionary
+            for remoteProfileDict in dict["remoteProfiles"]! {
+                ProfilesTableViewController.remoteProfiles.append(RemoteProfile.fromDict(dict: remoteProfileDict))
+            }
+            for localProfileDict in dict["localProfiles"]! {
+                ProfilesTableViewController.localProfiles.append(LocalProfile.fromDict(dict: localProfileDict))
+            }
         }
     }
 }

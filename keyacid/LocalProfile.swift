@@ -65,4 +65,20 @@ class LocalProfile: RemoteProfile {
         }
         return Data.init()
     }
+
+    override func toDict() -> [String : String] {
+        return [
+            "name" : name,
+            "publicKey" : publicKey.base64EncodedString(),
+            "privateKey" : privateKey.base64EncodedString()
+        ]
+    }
+
+    override class func fromDict(dict: [String : String]) -> LocalProfile {
+        let ret: LocalProfile = LocalProfile.init()
+        ret.name = dict["name"]!
+        ret.publicKey = Data.init(base64Encoded: dict["publicKey"]!)!
+        ret.privateKey = Data.init(base64Encoded: dict["privateKey"]!)!
+        return ret
+    }
 }

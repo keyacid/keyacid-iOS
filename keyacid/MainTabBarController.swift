@@ -10,6 +10,15 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
 
+    static var profilesShown: Bool = false
+
+    override func viewDidAppear(_ animated: Bool) {
+        if !MainTabBarController.profilesShown {
+            MainTabBarController.profilesShown = true
+            self.performSegue(withIdentifier: "ShowProfiles", sender: self)
+        }
+    }
+
     @IBAction func profilesClicked() {
         self.performSegue(withIdentifier: "ShowProfiles", sender: self)
     }

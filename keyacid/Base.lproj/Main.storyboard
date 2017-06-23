@@ -491,6 +491,25 @@
             </objects>
             <point key="canvasLocation" x="1185" y="522"/>
         </scene>
+        <!--About-->
+        <scene sceneID="YFS-cG-SFE">
+            <objects>
+                <viewController id="URh-xK-NaV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oou-pM-78o"/>
+                        <viewControllerLayoutGuide type="bottom" id="YEh-Sz-mTj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i4A-8R-qco">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="About" id="psA-a3-ezr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2yj-NE-nv7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1943" y="195"/>
+        </scene>
         <!--Encrypt / Decrypt-->
         <scene sceneID="S6o-UD-H63">
             <objects>
@@ -515,9 +534,14 @@
             <objects>
                 <tabBarController id="5Pu-FB-vIQ" customClass="MainTabBarController" customModule="keyacid" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="keyacid" id="3f7-j4-PF4">
+                        <barButtonItem key="leftBarButtonItem" title="About" id="axY-zM-fMT">
+                            <connections>
+                                <segue destination="URh-xK-NaV" kind="show" id="1KT-xD-qc9"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Profiles" id="PD5-dw-wXL">
                             <connections>
-                                <action selector="profilesClicked" destination="5Pu-FB-vIQ" id="XRc-OV-90Y"/>
+                                <action selector="profilesClicked" destination="5Pu-FB-vIQ" id="1LG-BJ-9j3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -529,7 +553,7 @@
                     <connections>
                         <segue destination="U9M-Or-289" kind="relationship" relationship="viewControllers" id="PAR-pF-zCz"/>
                         <segue destination="K9Q-VL-RiW" kind="relationship" relationship="viewControllers" id="6qf-Bz-NCD"/>
-                        <segue destination="cpp-Yc-WRF" kind="show" identifier="ShowProfiles" id="IsJ-v9-jgd"/>
+                        <segue destination="cpp-Yc-WRF" kind="show" identifier="ShowProfiles" id="fTw-27-yGs"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SBL-Zs-HCZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

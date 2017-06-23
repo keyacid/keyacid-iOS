@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if sodium_init() == -1 {
             return false
         }
+        ProfilesTableViewController.securelyLoadProfiles()
         return true
     }
 
