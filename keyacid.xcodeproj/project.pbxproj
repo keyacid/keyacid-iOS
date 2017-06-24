@@ -14,6 +14,9 @@
 		750D17171EFABC4500DC857A /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750D17141EFABC4500DC857A /* Crypto.swift */; };
 		750D17181EFABC4500DC857A /* LocalProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750D17151EFABC4500DC857A /* LocalProfile.swift */; };
 		750D17191EFABC4500DC857A /* RemoteProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750D17161EFABC4500DC857A /* RemoteProfile.swift */; };
+		75348F3B1EFE49AF00B2FB7C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75348F3A1EFE49AF00B2FB7C /* AboutViewController.swift */; };
+		75348F3D1EFE59A500B2FB7C /* EncryptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75348F3C1EFE59A500B2FB7C /* EncryptViewController.swift */; };
+		75348F3F1EFE59D500B2FB7C /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75348F3E1EFE59D500B2FB7C /* SignViewController.swift */; };
 		754B4F571EFCF9D700592DF2 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B4F561EFCF9D700592DF2 /* MainTabBarController.swift */; };
 		7598472B1EFB73F700AEBCFA /* ProfilesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7598472A1EFB73F700AEBCFA /* ProfilesTableViewController.swift */; };
 		7598472D1EFB755700AEBCFA /* RemoteProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7598472C1EFB755700AEBCFA /* RemoteProfileTableViewController.swift */; };
@@ -32,6 +35,9 @@
 		750D17141EFABC4500DC857A /* Crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
 		750D17151EFABC4500DC857A /* LocalProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalProfile.swift; sourceTree = "<group>"; };
 		750D17161EFABC4500DC857A /* RemoteProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteProfile.swift; sourceTree = "<group>"; };
+		75348F3A1EFE49AF00B2FB7C /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		75348F3C1EFE59A500B2FB7C /* EncryptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncryptViewController.swift; sourceTree = "<group>"; };
+		75348F3E1EFE59D500B2FB7C /* SignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
 		754B4F561EFCF9D700592DF2 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		7598472A1EFB73F700AEBCFA /* ProfilesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilesTableViewController.swift; sourceTree = "<group>"; };
 		7598472C1EFB755700AEBCFA /* RemoteProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteProfileTableViewController.swift; sourceTree = "<group>"; };
@@ -78,9 +84,12 @@
 				750D17141EFABC4500DC857A /* Crypto.swift */,
 				750D17061EFABC1200DC857A /* Main.storyboard */,
 				754B4F561EFCF9D700592DF2 /* MainTabBarController.swift */,
+				75348F3C1EFE59A500B2FB7C /* EncryptViewController.swift */,
+				75348F3E1EFE59D500B2FB7C /* SignViewController.swift */,
 				7598472A1EFB73F700AEBCFA /* ProfilesTableViewController.swift */,
 				7598472C1EFB755700AEBCFA /* RemoteProfileTableViewController.swift */,
 				7598472E1EFB756A00AEBCFA /* LocalProfileTableViewController.swift */,
+				75348F3A1EFE49AF00B2FB7C /* AboutViewController.swift */,
 				750D17091EFABC1200DC857A /* Assets.xcassets */,
 				750D170B1EFABC1200DC857A /* LaunchScreen.storyboard */,
 				750D170E1EFABC1200DC857A /* Info.plist */,
@@ -197,6 +206,9 @@
 				750D17191EFABC4500DC857A /* RemoteProfile.swift in Sources */,
 				750D17171EFABC4500DC857A /* Crypto.swift in Sources */,
 				754B4F571EFCF9D700592DF2 /* MainTabBarController.swift in Sources */,
+				75348F3F1EFE59D500B2FB7C /* SignViewController.swift in Sources */,
+				75348F3B1EFE49AF00B2FB7C /* AboutViewController.swift in Sources */,
+				75348F3D1EFE59A500B2FB7C /* EncryptViewController.swift in Sources */,
 				7598472D1EFB755700AEBCFA /* RemoteProfileTableViewController.swift in Sources */,
 				7598472F1EFB756A00AEBCFA /* LocalProfileTableViewController.swift in Sources */,
 				750D17181EFABC4500DC857A /* LocalProfile.swift in Sources */,

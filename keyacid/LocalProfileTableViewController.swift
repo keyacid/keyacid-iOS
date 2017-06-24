@@ -17,6 +17,7 @@ class LocalProfileTableViewController: UITableViewController {
     static var showProfile: LocalProfile? = nil
 
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         if LocalProfileTableViewController.showProfile != nil {
             name.text = LocalProfileTableViewController.showProfile?.name
             publicKey.text = LocalProfileTableViewController.showProfile?.publicKey.base64EncodedString()

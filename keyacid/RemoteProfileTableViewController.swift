@@ -17,6 +17,7 @@ class RemoteProfileTableViewController: UITableViewController {
     static var scannedString: String? = nil
 
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         if RemoteProfileTableViewController.showProfile != nil {
             name.text = RemoteProfileTableViewController.showProfile?.name
             publicKey.text = RemoteProfileTableViewController.showProfile?.publicKey.base64EncodedString()
@@ -82,5 +83,9 @@ class RemoteProfileTableViewController: UITableViewController {
         let OKAction: UIAlertAction = UIAlertAction.init(title: "OK", style: .default, handler: nil)
         copied.addAction(OKAction)
         self.present(copied, animated: true, completion: nil)
+    }
+
+    @IBAction func showQRCodeClicked() {
+        self.performSegue(withIdentifier: "ShowShowQRCode", sender: self)
     }
 }
