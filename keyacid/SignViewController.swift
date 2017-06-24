@@ -13,6 +13,11 @@ class SignViewController: UIViewController {
     @IBOutlet weak var signature: UITextField!
     @IBOutlet weak var textView: UITextView!
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        textView.inputAccessoryView = DoneView.init(frame: CGRect.init(x: 0, y: 0, width: 0, height: 40), textBox: textView)
+    }
+
     func getSelectedRemoteProfile() -> RemoteProfile? {
         if ProfilesTableViewController.selectedRemoteProfileIndex == -1 {
             let remoteProfileNotSelected: UIAlertController = UIAlertController.init(title: "Error", message: "You have to select a remote profile!", preferredStyle: .alert)
