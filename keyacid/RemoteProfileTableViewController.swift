@@ -87,6 +87,7 @@ class RemoteProfileTableViewController: UITableViewController {
     }
 
     @IBAction func showQRCodeClicked() {
+        ShowQRCodeViewController.publicKey = publicKey.text!
         self.performSegue(withIdentifier: "ShowShowQRCode", sender: self)
     }
 }

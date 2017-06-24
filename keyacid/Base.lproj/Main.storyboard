@@ -268,19 +268,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wSs-c2-Opc">
-                                <rect key="frame" x="0.0" y="64" width="375" height="508"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="553"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMC-QW-Owx">
-                                <rect key="frame" x="16" y="578" width="343" height="34"/>
+                                <rect key="frame" x="16" y="625" width="343" height="34"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Load from Photos"/>
+                                <connections>
+                                    <action selector="loadClicked" destination="mbK-Iv-J8q" eventType="touchUpInside" id="bEO-C5-e6X"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Scan QR Code" id="cxD-mK-DKV"/>
+                    <connections>
+                        <outlet property="scanPlaceHolder" destination="wSs-c2-Opc" id="bf1-fI-LVb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="35P-cG-ad4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -497,20 +503,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LHH-fj-fod">
+                                <rect key="frame" x="16" y="72" width="343" height="545"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2z-82-QTM">
-                                <rect key="frame" x="16" y="576" width="343" height="34"/>
+                                <rect key="frame" x="16" y="625" width="343" height="34"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Save to Photos"/>
+                                <connections>
+                                    <action selector="saveClicked" destination="ynz-Qj-pR8" eventType="touchUpInside" id="vWd-UV-tZF"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LHH-fj-fod">
-                                <rect key="frame" x="16" y="72" width="343" height="496"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Show QR Code" id="RKK-ux-x5i"/>
+                    <connections>
+                        <outlet property="QRCode" destination="LHH-fj-fod" id="UeA-Zr-5ez"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jua-IK-ljt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
