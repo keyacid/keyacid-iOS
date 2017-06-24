@@ -578,7 +578,7 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Sign / Verify" id="ccW-iO-a5D"/>
+                    <tabBarItem key="tabBarItem" title="Sign / Verify" image="sign.png" id="ccW-iO-a5D"/>
                     <connections>
                         <outlet property="signature" destination="nBz-JW-KZk" id="Wpj-1A-51q"/>
                         <outlet property="textView" destination="RFp-p7-P3Q" id="op9-Ld-z6V"/>
@@ -738,7 +738,7 @@ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH RE
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Encrypt / Decrypt" id="RUr-Yw-5Dt"/>
+                    <tabBarItem key="tabBarItem" title="Encrypt / Decrypt" image="encrypt.png" id="RUr-Yw-5Dt"/>
                     <connections>
                         <outlet property="signedAnonymous" destination="tcm-iX-c1u" id="xgB-oe-qBu"/>
                         <outlet property="textView" destination="3R8-CH-j2n" id="l8W-1L-mHf"/>
@@ -781,6 +781,10 @@ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH RE
             <point key="canvasLocation" x="276" y="195"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="encrypt.png" width="30" height="30"/>
+        <image name="sign.png" width="30" height="30"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="myP-td-ThD"/>
         <segue reference="gtk-MI-kf4"/>

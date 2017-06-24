@@ -26,6 +26,8 @@
 		7598472D1EFB755700AEBCFA /* RemoteProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7598472C1EFB755700AEBCFA /* RemoteProfileTableViewController.swift */; };
 		7598472F1EFB756A00AEBCFA /* LocalProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7598472E1EFB756A00AEBCFA /* LocalProfileTableViewController.swift */; };
 		75B709BA1EFB3E6E007BA123 /* origin.png in Resources */ = {isa = PBXBuildFile; fileRef = 75B709B91EFB3E6E007BA123 /* origin.png */; };
+		75BCEC111EFEBCD1001CAD6D /* encrypt.png in Resources */ = {isa = PBXBuildFile; fileRef = 75BCEC0F1EFEBCD1001CAD6D /* encrypt.png */; };
+		75BCEC121EFEBCD1001CAD6D /* sign.png in Resources */ = {isa = PBXBuildFile; fileRef = 75BCEC101EFEBCD1001CAD6D /* sign.png */; };
 		75CC0D111EFABCA90004045B /* Sodium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75CC0D101EFABCA90004045B /* Sodium.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		7598472C1EFB755700AEBCFA /* RemoteProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteProfileTableViewController.swift; sourceTree = "<group>"; };
 		7598472E1EFB756A00AEBCFA /* LocalProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalProfileTableViewController.swift; sourceTree = "<group>"; };
 		75B709B91EFB3E6E007BA123 /* origin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = origin.png; sourceTree = "<group>"; };
+		75BCEC0F1EFEBCD1001CAD6D /* encrypt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = encrypt.png; sourceTree = "<group>"; };
+		75BCEC101EFEBCD1001CAD6D /* sign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sign.png; sourceTree = "<group>"; };
 		75CC0D101EFABCA90004045B /* Sodium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sodium.framework; path = Carthage/Build/iOS/Sodium.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +110,8 @@
 				750D170B1EFABC1200DC857A /* LaunchScreen.storyboard */,
 				750D170E1EFABC1200DC857A /* Info.plist */,
 				75B709B91EFB3E6E007BA123 /* origin.png */,
+				75BCEC0F1EFEBCD1001CAD6D /* encrypt.png */,
+				75BCEC101EFEBCD1001CAD6D /* sign.png */,
 			);
 			path = keyacid;
 			sourceTree = "<group>";
@@ -185,6 +191,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				750D170D1EFABC1200DC857A /* LaunchScreen.storyboard in Resources */,
+				75BCEC111EFEBCD1001CAD6D /* encrypt.png in Resources */,
+				75BCEC121EFEBCD1001CAD6D /* sign.png in Resources */,
 				75B709BA1EFB3E6E007BA123 /* origin.png in Resources */,
 				750D170A1EFABC1200DC857A /* Assets.xcassets in Resources */,
 				750D17081EFABC1200DC857A /* Main.storyboard in Resources */,
