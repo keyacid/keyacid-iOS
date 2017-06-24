@@ -258,7 +258,7 @@
         <!--Scan QR Code-->
         <scene sceneID="TIv-Fc-PTr">
             <objects>
-                <viewController id="mbK-Iv-J8q" sceneMemberID="viewController">
+                <viewController id="mbK-Iv-J8q" customClass="ScanQRCodeViewController" customModule="keyacid" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8Pc-Cg-CLx"/>
                         <viewControllerLayoutGuide type="bottom" id="Mrd-Rm-7kt"/>
@@ -266,13 +266,25 @@
                     <view key="view" contentMode="scaleToFill" id="VyX-6G-y0D">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wSs-c2-Opc">
+                                <rect key="frame" x="0.0" y="64" width="375" height="508"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMC-QW-Owx">
+                                <rect key="frame" x="16" y="578" width="343" height="34"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Load from Photos"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Scan QR Code" id="cxD-mK-DKV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="35P-cG-ad4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-162" y="2481"/>
+            <point key="canvasLocation" x="-162.40000000000001" y="2480.5097451274364"/>
         </scene>
         <!--Local Profile-->
         <scene sceneID="Nwx-QC-5QU">
@@ -476,7 +488,7 @@
         <!--Show QR Code-->
         <scene sceneID="j2h-8M-Vil">
             <objects>
-                <viewController id="ynz-Qj-pR8" sceneMemberID="viewController">
+                <viewController id="ynz-Qj-pR8" customClass="ShowQRCodeViewController" customModule="keyacid" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nsg-Y1-abr"/>
                         <viewControllerLayoutGuide type="bottom" id="xT9-bY-DUV"/>
@@ -484,13 +496,25 @@
                     <view key="view" contentMode="scaleToFill" id="B6Z-fi-1wP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2z-82-QTM">
+                                <rect key="frame" x="16" y="576" width="343" height="34"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Save to Photos"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LHH-fj-fod">
+                                <rect key="frame" x="16" y="72" width="343" height="496"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Show QR Code" id="RKK-ux-x5i"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jua-IK-ljt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="724" y="2481"/>
+            <point key="canvasLocation" x="724" y="2480.5097451274364"/>
         </scene>
         <!--Sign / Verify-->
         <scene sceneID="vXY-cL-9Ke">

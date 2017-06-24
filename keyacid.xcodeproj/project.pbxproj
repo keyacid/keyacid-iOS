@@ -20,6 +20,8 @@
 		754B4F571EFCF9D700592DF2 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754B4F561EFCF9D700592DF2 /* MainTabBarController.swift */; };
 		756F52271EFE96E2009926D0 /* DoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 756F52261EFE96E2009926D0 /* DoneView.xib */; };
 		756F52291EFE97CC009926D0 /* DoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756F52281EFE97CC009926D0 /* DoneView.swift */; };
+		756F522B1EFE9D94009926D0 /* ShowQRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756F522A1EFE9D94009926D0 /* ShowQRCodeViewController.swift */; };
+		756F522D1EFE9DA5009926D0 /* ScanQRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756F522C1EFE9DA5009926D0 /* ScanQRCodeViewController.swift */; };
 		7598472B1EFB73F700AEBCFA /* ProfilesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7598472A1EFB73F700AEBCFA /* ProfilesTableViewController.swift */; };
 		7598472D1EFB755700AEBCFA /* RemoteProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7598472C1EFB755700AEBCFA /* RemoteProfileTableViewController.swift */; };
 		7598472F1EFB756A00AEBCFA /* LocalProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7598472E1EFB756A00AEBCFA /* LocalProfileTableViewController.swift */; };
@@ -43,6 +45,8 @@
 		754B4F561EFCF9D700592DF2 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		756F52261EFE96E2009926D0 /* DoneView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DoneView.xib; sourceTree = "<group>"; };
 		756F52281EFE97CC009926D0 /* DoneView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneView.swift; sourceTree = "<group>"; };
+		756F522A1EFE9D94009926D0 /* ShowQRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowQRCodeViewController.swift; sourceTree = "<group>"; };
+		756F522C1EFE9DA5009926D0 /* ScanQRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanQRCodeViewController.swift; sourceTree = "<group>"; };
 		7598472A1EFB73F700AEBCFA /* ProfilesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilesTableViewController.swift; sourceTree = "<group>"; };
 		7598472C1EFB755700AEBCFA /* RemoteProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteProfileTableViewController.swift; sourceTree = "<group>"; };
 		7598472E1EFB756A00AEBCFA /* LocalProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalProfileTableViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 				7598472A1EFB73F700AEBCFA /* ProfilesTableViewController.swift */,
 				7598472C1EFB755700AEBCFA /* RemoteProfileTableViewController.swift */,
 				7598472E1EFB756A00AEBCFA /* LocalProfileTableViewController.swift */,
+				756F522C1EFE9DA5009926D0 /* ScanQRCodeViewController.swift */,
+				756F522A1EFE9D94009926D0 /* ShowQRCodeViewController.swift */,
 				75348F3A1EFE49AF00B2FB7C /* AboutViewController.swift */,
 				750D17091EFABC1200DC857A /* Assets.xcassets */,
 				750D170B1EFABC1200DC857A /* LaunchScreen.storyboard */,
@@ -217,7 +223,9 @@
 				75348F3F1EFE59D500B2FB7C /* SignViewController.swift in Sources */,
 				75348F3B1EFE49AF00B2FB7C /* AboutViewController.swift in Sources */,
 				75348F3D1EFE59A500B2FB7C /* EncryptViewController.swift in Sources */,
+				756F522D1EFE9DA5009926D0 /* ScanQRCodeViewController.swift in Sources */,
 				7598472D1EFB755700AEBCFA /* RemoteProfileTableViewController.swift in Sources */,
+				756F522B1EFE9D94009926D0 /* ShowQRCodeViewController.swift in Sources */,
 				7598472F1EFB756A00AEBCFA /* LocalProfileTableViewController.swift in Sources */,
 				750D17181EFABC4500DC857A /* LocalProfile.swift in Sources */,
 				750D17031EFABC1200DC857A /* AppDelegate.swift in Sources */,
