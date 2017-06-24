@@ -85,6 +85,7 @@ class LocalProfileTableViewController: UITableViewController {
                     LocalProfileTableViewController.showProfile?.publicKey = tmpLocalProfile.publicKey
                     LocalProfileTableViewController.showProfile?.privateKey = tmpLocalProfile.privateKey
                 }
+                ProfilesTableViewController.securelySaveProfiles()
                 LocalProfileTableViewController.showProfile = nil
                 self.navigationController?.popViewController(animated: true)
                 return

@@ -55,6 +55,7 @@ class RemoteProfileTableViewController: UITableViewController {
                     RemoteProfileTableViewController.showProfile?.name = tmpRemoteProfile.name
                     RemoteProfileTableViewController.showProfile?.publicKey = tmpRemoteProfile.publicKey
                 }
+                ProfilesTableViewController.securelySaveProfiles()
                 RemoteProfileTableViewController.showProfile = nil
                 self.navigationController?.popViewController(animated: true)
                 return
