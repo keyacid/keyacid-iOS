@@ -81,4 +81,8 @@ class SignViewController: UIViewController {
             self.present(error, animated: true, completion: nil)
         }
     }
+
+    @IBAction func signatureDone() {
+        signature.resignFirstResponder()
+    }
 }
